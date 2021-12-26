@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <div class="main" />
+  <div class="main">
+    <List />
+  </div>
 </template>
 
 <route lang="yaml">

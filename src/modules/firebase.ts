@@ -1,4 +1,6 @@
 export default {
+  // Actions
+
   async registerItem(context, data) {
     const itemId = context.rootgetters.ItemId
     const itemData = {
@@ -48,5 +50,39 @@ export default {
     }
     context.commit('setItems', items)
     context.commit('setFetchTimestamp')
+  },
+
+  // Getters
+
+  items(state) {
+    return state.items
+  },
+  hasItems(state) {
+    return state.items && state.items.length > 0
+  },
+  isItem(_, getters, _2, rootGetters) {
+    const items = getters.items
+    const userId = rootGetters.userId
+    return items.some(item => item.id === userId)
+  },
+  shouldUpdate(state) {
+    const lastFetch = state.lastFetch
+    if (!lastFetch)
+      return true
+
+    const currentTimeStamp = new Date().getTime()
+    return (currentTimeStamp - lastFetch) / 1000 > 60
+  },
+
+  // Mutations
+
+  registeritem(state, payload) {
+    state.items.push(payload)
+  },
+  setitems(state, payload) {
+    state.items = payload
+  },
+  setFetchTimestamp(state) {
+    state.lastFetch = new Date().getTime()
   },
 }
