@@ -12,6 +12,7 @@
   "dependencies": {
     "@vueuse/core": "^7.3.0",
     "@vueuse/head": "^0.7.4",
+    "firebase": "^9.6.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.6",
     "prism-theme-vars": "^0.2.2",
