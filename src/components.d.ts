@@ -4,12 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Add: typeof import('./components/Add.vue')['default']
     CarbonCampsite: typeof import('~icons/carbon/campsite')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     Footer: typeof import('./components/Footer.vue')['default']
-    List: typeof import('./components/List.vue')['default']
+    Header: typeof import('./components/Header.vue')['default']
     README: typeof import('./components/README.md')['default']
   }
 }

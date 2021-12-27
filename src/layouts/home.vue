@@ -3,7 +3,7 @@
     <router-view />
     <Footer />
     <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-      [Groceries by J]
+      [Nterface by J]
     </div>
   </main>
 </template>

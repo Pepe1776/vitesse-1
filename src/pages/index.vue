@@ -1,11 +1,9 @@
 <script setup lang="ts">
-
+import Header from '../components/Header.vue'
 </script>
 
 <template>
-  <div class="main">
-    <List />
-  </div>
+  <Header />
 </template>
 
 <route lang="yaml">
